@@ -1,13 +1,13 @@
-        <% if book.favorited_by?(current_user) %>
-        <td>
-          <%= link_to book_favorites_path(book),method: :delete do%>
-          <p class="text-danger">♥<%= book.favorites.count %></p>
-          <% end %>
-        </td>
-        <% else %>
-        <td>
-          <%= link_to book_favorites_path(book),method: :post do %>
-          <p>♥<%= book.favorites.count %></p>
-          <% end %>
-        </td>
-        <% end %>
+<% if book.favorited_by?(current_user) %>
+  <td>
+    <%= link_to book_favorites_path(book),method: :delete do%>
+    <p class="text-danger">♥<%= book.favorites.count %></p>
+    <% end %>
+  </td>
+  <% else %>
+  <td>
+    <%= link_to book_favorites_path(book),method: :post do %>
+    <p>♥<%= book.favorites.count %></p>
+    <% end %>
+  </td>
+<% end %>

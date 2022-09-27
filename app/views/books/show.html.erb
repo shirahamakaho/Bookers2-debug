@@ -18,7 +18,7 @@
           <td><%= link_to @book.title, @book %></td>
           <td><%= @book.body %></td>
 
-          <td id="favorites">
+          <td id="favorites_<%= @book.id %>">
             <%= render 'favorites/favorites',book:@book %>
           </td>
 
@@ -32,7 +32,10 @@
       </table>
 
       <%= render 'layouts/errors',obj:@book_comment %>
-      <%= render 'book_comments',book:@book,book_comment:@book_comment %>
+      <div id="comments">
+        <%= render 'book_comments/comments',book:@book,book_comment:@book_comment %>
+        <%= render 'book_comments/form',book:@book,book_comment:@book_comment %>
+      </div>
 
     </div>
   </div>

@@ -17,7 +17,7 @@ class Book < ApplicationRecord
     elsif method == "backward"
       Book.where("title LIKE?",'%'+word)
     elsif method == "partial"
-      Book.where("title LIKE?",'%'+word+'%')
+      Book.where(" LIKE?",'%'+word+'%')
     else
       Book.all
     end

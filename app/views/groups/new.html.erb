@@ -5,19 +5,19 @@
       <h2>Create Group</h2>
 
       <%= form_with model:@group,local:true do |f| %>
-      <div class="form_group">
+      <div class="form-group">
         <%= f.label:グループ名 %>
-        <%= f.text_field:name,class:'form_control' %>
+        <%= f.text_field:name,class:'form-control' %>
       </div>
-      <div class="form_group">
+      <div class="form-group">
         <%= f.label:紹介文 %>
-        <%= f.text_area:introduction,class:'form_control' %>
+        <%= f.text_area:introduction,class:'form-control' %>
       </div>
-      <div class="form_group">
+      <div class="form-group">
         <%= f.label:グループ画像 %>
-        <%= f.file_field :group_image,class:'form_control_file',accept: 'image/*'%>
+        <%= f.file_field :group_image,class:'form-control-file',accept: 'image/*'%>
       </div>
-      <div class="form_group">
+      <div class="form-group">
         <%= f.submit class:'btn btn-info'%>
       </div>
       <% end %>

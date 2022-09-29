@@ -21,4 +21,8 @@ class BookCommentsController < ApplicationController
   def book_comment_params
     params.require(:book_comment).permit(:comment)
   end
+
+  def ensure_correct_user
+  end
+
 end
